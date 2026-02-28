@@ -1,43 +1,23 @@
 <template>
     <div class="person">
-        <h1 ref="title1">尚硅谷</h1>
-        <h2 ref="title2">前端</h2>
-        <h3 ref="title3">Vue</h3>
-        <input type="text" ref="inpt"> <br><br>
-        <button @click="showLog">点我打印内容</button>
+        ???
     </div>
 </template>
 
-<!-- 子组件Person.vue中要使用defineExpose暴露内容 -->
 <script setup lang="ts" name="Person">
-import { ref,defineExpose } from 'vue'
-// 数据
-let title1 = ref()
-let title2 = ref()
-let title3 = ref()
+// 引入 type 的 PersonInter 接口类型
+// @是指进入文件的根目录
+import { type PersonInter, type Persons } from '@/types'
 
-// 
-let name = ref('张三')
-let age = ref(18)
-// 使用defineExpose将组件中的数据交给外部
-defineExpose({ name, age })
+// 定义一个 person 对象，符合 PersonInter 接口的类型
+// let person:PersonInter = {id:'1001',name:'张三',age:18}
 
-// 方法
-function showLog() { 
-    // 通过id获取元素
-    const t1 = document.getElementById('title1')
-    // 打印内容
-    console.log((t1 as HTMLElement).innerText)
-    console.log((<HTMLElement>t1).innerText)
-    console.log(t1?.innerText)
-
-
-    // 通过ref获取元素
-    console.log(title1.value)
-    console.log(title2.value)
-    console.log(title3.value)
-}
-
+// 定义一个 personList 数组，符合 PersonInter 接口的类型
+let personList: Persons = [
+    { id: '1001', name: '张三', age: 18 },
+    { id: '1002', name: '李四', age: 19 },
+    { id: '1003', name: '王五', age: 20 }
+]
 
 </script>
 
