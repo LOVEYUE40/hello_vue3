@@ -1,19 +1,20 @@
 <template>
-  <div class="app">
-    <h1>水温检测器</h1>
-    <Water />
-  </div>
+  <Person ref="ren" />
+  <button @click="test">测试</button>
 </template>
 
-<script lang="ts">
-// 引入Water组件
-import Water from './components/Water.vue'
-export default {
-  name: 'App',  //组件名
-  components: { 
-    Water //注册组件
-  }
+<script lang="ts" setup name="App">
+import Person from './components/Person.vue'
+import { ref } from 'vue'
+
+let ren = ref()
+
+function test() {
+  console.log(ren.value)
 }
+
+
+
 </script>
 
 <style>
