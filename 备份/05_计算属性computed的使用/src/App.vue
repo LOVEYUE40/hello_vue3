@@ -1,17 +1,19 @@
 <template>
   <div class="app">
-    <h1>水温检测器</h1>
-    <Water />
+    <h1>你好啊！</h1>
+    <Person />
+    <Car />
   </div>
 </template>
 
 <script lang="ts">
-// 引入Water组件
-import Water from './components/Water.vue'
+// 引入Person组件
+import Person from './components/Person.vue'
 export default {
   name: 'App',  //组件名
-  components: { 
-    Water //注册组件
+  components: {
+    Person //注册组件
+
   }
 }
 </script>
