@@ -1,21 +1,17 @@
 <template>
   <div class="app">
     <h1>你好啊！</h1>
-    <Person />
     <Car />
   </div>
 </template>
 
 <script lang="ts">
 // 引入Car组件
-// 引入Person组件
-import Person from './components/Person.vue'
 import Car from './components/Car.vue'
 export default {
   name: 'App',  //组件名
   components: {
-    Car, //注册组件
-    Person //注册组件
+    Car //注册组件
 
   }
 }
