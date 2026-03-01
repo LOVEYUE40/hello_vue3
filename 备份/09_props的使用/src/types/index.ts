@@ -5,5 +5,5 @@ export interface PersonInter{
     age: number,
 }
 
-// 一个自定义类型
+// 定义一个自定义类型Persons，用于表示一个人对象的数组
 export type Persons = PersonInter[]

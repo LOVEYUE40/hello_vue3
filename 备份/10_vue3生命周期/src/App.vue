@@ -1,9 +1,10 @@
 <template>
-    <Dog/>
+    <Sum />
 </template>
 
 <script lang="ts" setup name="App">
-import Dog from './components/Dog.vue'
+import Sum from './components/Sum.vue'
+
 
 </script>
 
