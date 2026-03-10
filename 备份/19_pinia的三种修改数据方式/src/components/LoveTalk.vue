@@ -10,28 +10,15 @@
 </template>
 
 <script setup lang="ts" name="LoveTalk">
-import { reactive } from 'vue'
-import axios from 'axios';
-import { nanoid } from 'nanoid'
 import { useTalkStore } from '@/store/talk';
 
 // 使用pinia中的talk的数据
 const talkStore = useTalkStore()
 
-// 诗句数据
 // 方法
-async function getLoveTalk() {
-    // 发请求，下面这行的写法是：连续解构赋值+重命名
-    // let { data: { value: title } } = await axios.get('https://api.chucknorris.io/jokes/random')
-
-    // 把请求回来的字符串，包装成一个对象
-    // let obj = { id: nanoid(), title }
-
-    // 放到数组中
-    // talkList.unshift(obj)
-
-
-
+function getLoveTalk() {
+    // 调用pinia中的actions方法
+  talkStore.getLoveTalk()
 }
 
 </script>
