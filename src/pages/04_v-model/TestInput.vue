@@ -1,4 +1,8 @@
 <template>
+  <!-- <input type="text" 
+        :value="modelValue"
+        @input="emit('update:modelValue',(<HTMLInputElement>$event.target).value)"
+  > -->
   <input 
     type="text" 
     :value="ming"
@@ -12,9 +16,9 @@
   >
 </template>
 
-<script setup lang="ts" name="AtguiguInput">
-  defineProps(['ming','mima'])
-  const emit = defineEmits(['update:ming','update:mima'])
+<script setup lang="ts" name="TestInput">
+  defineProps(['ming','mima','modelValue'])
+  const emit = defineEmits(['update:ming','update:mima','update:modelValue'])
 </script>
 
 <style scoped>

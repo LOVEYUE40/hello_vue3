@@ -1,17 +1,18 @@
 <template>
   <div class="child1">
-    <h3>子组件1</h3>
-		<h4>玩具：{{ toy }}</h4>
-		<button @click="emitter.emit('send-toy',toy)">玩具给弟弟</button>
+    <h3>哥哥组件</h3>
+	<h4>玩具：{{ toy }}</h4>
+	<button @click="emitter.emit('send-toy',toy)">给弟弟玩具</button>
   </div>
 </template>
 
 <script setup lang="ts" name="Child1">
-	import {ref} from 'vue'
-	// import emitter from '@/utils/emitter';
+import emitter from '@/utils/emitter';
+import {ref} from 'vue'
 
-	// 数据
-	let toy = ref('奥特曼')
+// 数据
+const toy = ref('变形金刚');
+	
 </script>
 
 <style scoped>
