@@ -4,6 +4,7 @@
 		<h4>房产：{{ house }}</h4>
 		<button @click="changeToy">修改Child1的玩具</button>
 		<button @click="changeComputer">修改Child2的电脑</button>
+		<!-- $refs:父组件访问子组件中实例 -->
 		<button @click="getAllChild($refs)">让所有孩子的书变多</button>
 		<Child1 ref="c1"/>
 		<Child2 ref="c2"/>
